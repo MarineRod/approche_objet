@@ -2,7 +2,7 @@
 
 	import entites.AdressePostale;
 
-	public class Personne {
+	public class Personne2{
 
 		public String nom;
 		public String prenom;

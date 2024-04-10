@@ -17,7 +17,7 @@ public class CompteTaux extends Compte {
 	@Override
 	public String toString() {
 		String chaine = super.toString();
-		return "CompteTaux [numero=" + getNumCompte() + ", solde=" + getSoldeCompte()+ ", tauxRemuneration=" + tauxRemuneration + "]";
+		return  chaine + ", tauxRemuneration=" + tauxRemuneration + "]";
 		
 	}
 	public double getTauxRemuneration() {
