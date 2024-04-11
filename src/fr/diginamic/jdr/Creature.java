@@ -13,15 +13,23 @@ public class Creature {
         this.pointsDeVie = random.nextInt(31) + 20; // points de vie entre 20 et 50
     }
 
-    // Méthode pour combattre le personnage
-    public void combattrePersonnage(Personnage personnage) {
-        if (pointsDeVie > 0 && personnage.pointsDeVie > 0) {
-            
-            System.out.println("Combat engagé !");
-        } else {
-            System.out.println("La créature ou le personnage est décédé. Le combat est impossible.");
-        }
-    }
+	public int getForce() {
+		return force;
+	}
 
+	public void setForce(int force) {
+		this.force = force;
+	}
+
+	public int getPointsDeVie() {
+		return pointsDeVie;
+	}
+
+	public void setPointsDeVie(int pointsDeVie) {
+		this.pointsDeVie = pointsDeVie;
+	}
+
+    
+   
     
 }

@@ -29,9 +29,26 @@ public class Personnage {
        if(pointsDeVie>0) {
     	   System.out.println("Combat engagé !");
        }else {
-    	   System.out.println("Votre personnage est décédé. Veuillez créer un nouveau personnage");
+    	   System.out.println("Votre personnage est décédé. Il a obtenu un score de "+pointsDeVie+"  points Veuillez créer un nouveau personnage");
     	   
        }
+       
+	}
+       
+    // Méthode pour combattre la créature
+	  
+	 
+       public void combattreCreature(Creature creature) {
+    	   
+    	   int pointsDeVieCreature = creature.getPointsDeVie();
+    	   
+           if (pointsDeVie > 0 && pointsDeVieCreature > 0) {
+               
+               System.out.println("Combat engagé !");
+           } else {
+               System.out.println("La créature ou le personnage est décédé. Le combat est impossible.");
+           }
+       
 	  
   }
 	
