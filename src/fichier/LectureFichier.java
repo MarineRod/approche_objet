@@ -20,7 +20,7 @@ public class LectureFichier {
 
 		System.out.println(liste);
 
-		ArrayList<Villes> villes = new ArrayList<>();
+		ArrayList<Villes> ListeVilles = new ArrayList<>(); //array de objet Villes
 
 		// Ignorer la première ligne (en-tête)
 		// int i=1
@@ -30,20 +30,22 @@ public class LectureFichier {
 			
 		//Ce code extrait les informations nécessaires à partir des tokens obtenus
 			String nom = tokens[6];
-			String codeDepartement = tokens[2];
+			int codeDepartement = Integer.parseInt(tokens[2]);
 			String nomRegion = tokens[1];
-			String populationTotale = tokens[9].trim().replaceAll(" ", "");
 			int popToT  = Integer.parseInt(tokens[9]);
 			
-			Villes ville = new Villes ("nom", "codeDepartement", "nomRegion", popToT);
+			Villes ville = new Villes (nom, codeDepartement, nomRegion, popToT); // 
 		
+			ListeVilles.add(ville); //J'ajoute toutes les lignes de mon  objet ville à ma liste ville
 			
-			villes.add(ville); 
+			
 			//Les valeurs de ces éléments sont concaténées à l'aide de l'opérateur + 
 			//pour former une seule chaîne de caractères.
 			//La chaîne résultante est ajoutée à la liste villes à l'aide de la méthode add()
 
 		}
+		
+		System.out.println(ListeVilles);
 
 	}
 

@@ -7,6 +7,8 @@ public class Villes {
 	protected String NomRegion;
 	protected int popToT;
 	
+		
+
 	
 	public Villes(String nom, int codeDepartement, String nomRegion, int popToT) {
 		super();
@@ -14,10 +16,9 @@ public class Villes {
 		this.codeDepartement = codeDepartement;
 		NomRegion = nomRegion;
 		this.popToT = popToT;
-		
-		
 	}
-	
+
+
 	public String getNom() {
 		return Nom;
 	}
@@ -60,6 +61,4 @@ public class Villes {
 
 	
 	}
-	
 
-}
