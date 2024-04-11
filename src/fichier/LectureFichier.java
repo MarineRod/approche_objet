@@ -9,6 +9,8 @@ import java.util.List;
 
 
 
+
+
 public class LectureFichier {
 
 	public static void main(String[] args) throws IOException {
@@ -24,16 +26,16 @@ public class LectureFichier {
 		// int i=1
 		for (int i = 0; i < liste.size(); i++) {
 			String ligne = liste.get(i); //pour chaque ligne du fichier récupéré
-			String[] tokens = ligne.split(","); // on découpe chaque ligne en tableau de chaine de caractères sur la base d’un séparateur
+			String[] tokens = ligne.split(";"); // on découpe chaque ligne en tableau de chaine de caractères sur la base d’un séparateur
 			
 		//Ce code extrait les informations nécessaires à partir des tokens obtenus
 			String nom = tokens[6];
 			String codeDepartement = tokens[2];
 			String nomRegion = tokens[1];
-			String popToT = tokens[9].trim().replaceAll(" ", "");
+			String populationTotale = tokens[9].trim().replaceAll(" ", "");
+			int popToT  = Integer.parseInt(tokens[9]);
 			
-			int populationTotale = Integer.parseInt(tokens[9]);
-			
+			Ville ville = new Ville(nom, codeDepartement, nomRegion, popToT) 
 		
 			
 			villes.add(tokens[6] + ";" + tokens[2] + ";" + tokens[1]+ ";" + tokens[9]); 
