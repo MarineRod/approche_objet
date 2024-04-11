@@ -20,8 +20,8 @@ public class TestListeInt {
 		System.out.println(nouvelleListe.size());
 
 		// Recherchez et affichez le plus grand élément de la liste
-		int max = Integer.MIN_VALUE;
-		for (int nombre : nouvelleListe) {
+		Integer max = Integer.MIN_VALUE;
+		for (Integer nombre : nouvelleListe) {
 			if (nombre > max) {
 				max = nombre;
 			}
@@ -30,20 +30,20 @@ public class TestListeInt {
 		System.out.println("Plus grand élément de la liste : " + max);
 
 		// Supprimez le plus petit élément de la liste et affichez le résultat
-		ArrayList<Integer> suppression = new ArrayList<>();
-		int min = Integer.MAX_VALUE;
-		for (int nombre : nouvelleListe) {
+		
+		Integer min = Integer.MAX_VALUE;
+		for (Integer nombre : nouvelleListe) {
 			if (nombre < min) {
 				min = nombre;
-				System.out.println("Plus petit élément de la liste : " + min);
-				suppression.add(min);
-
+				
 			}
 
 		}
 
-		//nouvelleListe.remove(suppression);
-		//System.out.println(nouvelleListe);
+		nouvelleListe.remove(min);
+		System.out.println(nouvelleListe);
+		
+		
 
 		// Recherchez tous les éléments négatifs et modifiez-les de manière à ce qu’ils
 		// deviennent positifs.

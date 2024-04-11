@@ -17,37 +17,37 @@ public class TestListeString {
 		AjoutVilles.add("Marseille");
 		AjoutVilles.add("Tarbes");
 
+		String villePlusLongue = "";
 		for (String ville : AjoutVilles) {
-			String villePlusLongue = "";
 			if (ville.length() > villePlusLongue.length()) {
 				villePlusLongue = ville;
-				
+
 			}
-			// Afficher la ville avec le plus grand nombre de lettres
-			System.out.println("Ville avec le plus grand nombre de lettres : " + villePlusLongue);
 
 		}
-		
+		// Afficher la ville avec le plus grand nombre de lettres
+		System.out.println("Ville avec le plus grand nombre de lettres : " + villePlusLongue);
+
 		// Mettre tous les noms de villes en majuscules
-        for (int i = 0; i < AjoutVilles.size(); i++) {
-        	AjoutVilles.set(i, AjoutVilles.get(i).toUpperCase());
-        }
+		for (int i = 0; i < AjoutVilles.size(); i++) {
+			AjoutVilles.set(i, AjoutVilles.get(i).toUpperCase());
+		}
 
-        // Afficher la liste mise à jour
-        System.out.println("Liste des villes en majuscules : " + AjoutVilles);
-        
-        
-     // Supprimer les villes dont le nom commence par la lettre "N"
-        Iterator<String> it = AjoutVilles.iterator();
-        while (it.hasNext()) {
-            String ville = it.next();
-            if (ville.startsWith("N")) {
-                it.remove();
-            }
-        }
+		// Afficher la liste mise à jour
+		System.out.println("Liste des villes en majuscules : " + AjoutVilles);
 
-        // Afficher la liste mise à jour
-        System.out.println("Liste des villes après suppression des villes commençant par la lettre 'N' : " + AjoutVilles);
-	
+		// Supprimer les villes dont le nom commence par la lettre "N"
+		Iterator<String> it = AjoutVilles.iterator();
+		while (it.hasNext()) {
+			String ville = it.next();
+			if (ville.startsWith("N")) {
+				it.remove();
+			}
+		}
+
+		// Afficher la liste mise à jour
+		System.out
+				.println("Liste des villes après suppression des villes commençant par la lettre 'N' : " + AjoutVilles);
+
 	}
 }
