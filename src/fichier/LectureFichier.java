@@ -35,10 +35,10 @@ public class LectureFichier {
 			String populationTotale = tokens[9].trim().replaceAll(" ", "");
 			int popToT  = Integer.parseInt(tokens[9]);
 			
-			Ville ville = new Ville(nom, codeDepartement, nomRegion, popToT) 
+			Villes ville = new Villes ("nom", "codeDepartement", "nomRegion", popToT);
 		
 			
-			villes.add(tokens[6] + ";" + tokens[2] + ";" + tokens[1]+ ";" + tokens[9]); 
+			villes.add(ville); 
 			//Les valeurs de ces éléments sont concaténées à l'aide de l'opérateur + 
 			//pour former une seule chaîne de caractères.
 			//La chaîne résultante est ajoutée à la liste villes à l'aide de la méthode add()
