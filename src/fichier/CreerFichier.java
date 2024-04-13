@@ -34,7 +34,7 @@ public class CreerFichier {
 		
 		
 		//Je crée le nouveau fichier qui ne contient que les 100 premières lignes
-		Path pathDest =Paths.get("D:/Diginamic/06. Langage Java - Approche orientée objet/TP/recensement.csv");
+		Path pathDest =Paths.get("D:/Diginamic/06. Langage Java - Approche orientée objet/TP/selection.csv");
 		Files.write(pathDest,selection);
 		
       

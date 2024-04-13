@@ -1,6 +1,6 @@
-package fichier;
+package tri;
 
-public class Villes {
+public class Villes implements Comparable <Villes>{
 	
 	protected String nom;
 	protected String codeDepartement;
@@ -8,6 +8,9 @@ public class Villes {
 	protected int popTot;
 	
 		
+
+	
+	
 
 
 	
@@ -19,7 +22,18 @@ public class Villes {
 		this.popTot = popTot;
 	}
 
-	
+	@Override
+	public int compareTo(Villes autre) {
+		
+		if(autre.getPopTot() <this.popTot) {
+			return -1;
+		}
+		else if (autre.getPopTot()>this.popTot) {
+			return 1;
+		}
+		
+		return this.nom.compareTo(autre.getNom());
+	}
 
 	@Override
 	public String toString() {
