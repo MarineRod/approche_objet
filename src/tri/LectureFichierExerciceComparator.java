@@ -1,7 +1,6 @@
 package tri;
 
 import java.io.IOException;
-
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -9,10 +8,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class LectureFichier2 {
+public class LectureFichierExerciceComparator {
 
 	public static void main(String[] args) throws IOException {
-
 		Path path = Paths.get("D:/Diginamic/06. Langage Java - Approche orientée objet/TP/recensement.csv");
 		List<String> liste = Files.readAllLines(path); // Je lis le contenu du fichier dans la variable liste
 

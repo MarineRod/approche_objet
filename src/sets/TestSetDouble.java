@@ -2,6 +2,7 @@ package sets;
 
 import java.util.HashSet;
 
+
 import listes.Ville;
 
 public class TestSetDouble {
@@ -30,21 +31,29 @@ public class TestSetDouble {
 
 			}
 		}
-        System.out.println(plusGrandElement);
-        
-        
-        // Supprimez le plus petit élément de la collection
-        
-        double plusPetitElement = Double.MAX_VALUE;
+		System.out.println(plusGrandElement);
+
+		// Supprimez le plus petit élément de la collection
+
+		double plusPetitElement = Double.MAX_VALUE;
 		for (double setDou : setDoubles) {
 			if (setDou < plusPetitElement) {
 				plusPetitElement = setDou;
 
 			}
 		}
-		
 		System.out.println(plusPetitElement);
+		
 		setDoubles.remove(plusPetitElement);
+//
+//		Iterator<Double> it = setDoubles.iterator();
+//		while (it.hasNext()) {
+//			Double num = it.next();
+//			if (num.equals(plusPetitElement)) {
+//				it.remove();
+//			}
+//		}
 		System.out.println(setDoubles);
 	}
+
 }

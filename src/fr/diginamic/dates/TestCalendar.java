@@ -28,21 +28,21 @@ public class TestCalendar {
 		String formatDate3 = format2.format(d2);
 		System.out.println(formatDate3);
 
-		SimpleDateFormat sdfFrench = new SimpleDateFormat("EEEE, dd MMMM yyyy", Locale.FRENCH);
-		SimpleDateFormat sdfRussian = new SimpleDateFormat("EEEE, dd MMMM yyyy", new Locale("ru", "RU"));
-		SimpleDateFormat sdfChinese = new SimpleDateFormat("EEEE, dd MMMM yyyy", Locale.CHINESE);
-		SimpleDateFormat sdfGerman = new SimpleDateFormat("EEEE, dd MMMM yyyy", Locale.GERMAN);
+		SimpleDateFormat French = new SimpleDateFormat("EEEE, dd MMMM yyyy", Locale.FRENCH);
+		SimpleDateFormat Russian = new SimpleDateFormat("EEEE, dd MMMM yyyy", new Locale("ru", "RU"));
+		SimpleDateFormat Chinese = new SimpleDateFormat("EEEE, dd MMMM yyyy", Locale.CHINESE);
+		SimpleDateFormat German = new SimpleDateFormat("EEEE, dd MMMM yyyy", Locale.GERMAN);
 		
-		String formatDate4 = sdfFrench.format(d2);
+		String formatDate4 = French.format(d2);
 		System.out.println(formatDate4);
 		
-		String formatDate5 = sdfRussian.format(d2);
+		String formatDate5 = Russian.format(d2);
 		System.out.println(formatDate5);
 		
-		String formatDate6 = sdfChinese.format(d2);
+		String formatDate6 = Chinese.format(d2);
 		System.out.println(formatDate6);
 		
-		String formatDate7 = sdfChinese.format(d2);
+		String formatDate7 = German.format(d2);
 		System.out.println(formatDate7);
 	}
 

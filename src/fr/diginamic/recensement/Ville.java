@@ -33,6 +33,9 @@ public class Ville {
 
 
 
+	
+
+
 	public String getCodeRegion() {
 		return codeRegion;
 	}

@@ -1,18 +1,59 @@
 package sets;
 
+import java.util.Objects;
+
 public class Pays {
 	//3 attributs : nom, nb d’habitants, PIB/habitant.
-	private String nom;
+	protected String nom;
 	private int nbHabitants;
-	private int pibHab;
+	private double pibHab;
 	
 	
-	public Pays(String nom, int nbHabitants, int pibHab) {
+	public Pays(String nom, int nbHabitants, double pibHab) {
 		super();
 		this.nom = nom;
 		this.nbHabitants = nbHabitants;
 		this.pibHab = pibHab;
 	}
+
+	 public double getPIBTotal() {
+	        return nbHabitants *pibHab;
+	    }
+	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(nbHabitants, nom, pibHab);
+	}
+
+
+
+
+	
+
+
+
+	 @Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Pays other = (Pays) obj;
+		double PIBTotal = nbHabitants * pibHab;
+		double otherPIBTotal = other.nbHabitants * other.pibHab;
+		return nbHabitants == other.nbHabitants && Objects.equals(nom, other.nom)
+				&& Double.doubleToLongBits(pibHab) == Double.doubleToLongBits(other.pibHab)&& Double.doubleToLongBits(PIBTotal) == Double.doubleToLongBits(otherPIBTotal);
+	}
+
+	@Override
+	    public String toString() {
+	        return nom + ", " + nbHabitants + " hab." + pibHab + "pibHab";
+	    }
+
+
 
 
 	public String getNom() {
@@ -20,9 +61,13 @@ public class Pays {
 	}
 
 
+
+
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
+
+
 
 
 	public int getNbHabitants() {
@@ -30,23 +75,26 @@ public class Pays {
 	}
 
 
+
+
 	public void setNbHabitants(int nbHabitants) {
 		this.nbHabitants = nbHabitants;
 	}
 
 
-	public int getPibHab() {
+
+
+	public double getPibHab() {
 		return pibHab;
 	}
 
 
-	public void setPibHab(int pibHab) {
+
+
+	public void setPibHab(double pibHab) {
 		this.pibHab = pibHab;
 	}
-	
-	 @Override
-	    public String toString() {
-	        return nom + ", " + nbHabitants + " hab." + pibHab + "pibHab";
-	    }
 
+	 
+	 
 }

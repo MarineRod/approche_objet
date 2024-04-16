@@ -1,19 +1,12 @@
 package tri;
 
-public class Villes implements Comparable <Villes>{
-	
+public class Villes implements Comparable<Villes> {
+
 	protected String nom;
 	protected String codeDepartement;
 	protected String NomRegion;
 	protected int popTot;
-	
-		
 
-	
-	
-
-
-	
 	public Villes(String nom, String codeDepartement, String nomRegion, int popTot) {
 		super();
 		this.nom = nom;
@@ -24,14 +17,7 @@ public class Villes implements Comparable <Villes>{
 
 	@Override
 	public int compareTo(Villes autre) {
-		
-		if(autre.getPopTot() <this.popTot) {
-			return -1;
-		}
-		else if (autre.getPopTot()>this.popTot) {
-			return 1;
-		}
-		
+
 		return this.nom.compareTo(autre.getNom());
 	}
 
@@ -73,7 +59,4 @@ public class Villes implements Comparable <Villes>{
 		this.popTot = popTot;
 	}
 
-
-	
-	
 }
