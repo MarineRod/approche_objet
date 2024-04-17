@@ -14,7 +14,7 @@ public class TestEnumeration {
       System.out.println(selection);
       
       String libelle = "Hiver";
-      Saison saisonHiver = Saison.getSaisonByLibelle(libelle);
+      Saison saisonHiver = Saison.obtenirSaison(libelle);
       System.out.println(saisonHiver);
 	}
 

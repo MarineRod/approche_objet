@@ -3,8 +3,6 @@ package sets;
 import java.util.HashSet;
 
 
-import listes.Ville;
-
 public class TestSetDouble {
 
 	public static void main(String[] args) {

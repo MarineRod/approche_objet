@@ -3,9 +3,9 @@ package fr.diginamic.testenumeration;
 public class VillesContinent implements Comparable<VillesContinent> {
 
 	private String nom;
-	private String continent;
+	private Continent continent;
 
-	public VillesContinent(String nom, String continent) {
+	public VillesContinent(String nom, Continent continent) {
 		super();
 		this.nom = nom;
 		this.continent = continent;
@@ -19,14 +19,16 @@ public class VillesContinent implements Comparable<VillesContinent> {
 		this.nom = nom;
 	}
 
-	public String getContinent() {
+	public Continent getContinent() {
 		return continent;
 	}
 
-	public void setContinent(String continent) {
+	public void setContinent(Continent continent) {
 		this.continent = continent;
 	}
 
+	
+	
 	@Override
 	public String toString() {
 		return "VillesContinent [nom=" + nom + ", continent=" + continent + "]";
@@ -38,4 +40,5 @@ public class VillesContinent implements Comparable<VillesContinent> {
 		return 0;
 	}
 
+	
 }

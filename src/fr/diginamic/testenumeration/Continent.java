@@ -2,18 +2,13 @@ package fr.diginamic.testenumeration;
 
 public enum Continent {
 
-	EUROPE(1, "Europe"), AMERIQUE(2, "Amérique"), ASIE(3, "Asie"), OCEANIE(4, "Océanie"), AFRIQUE(4, "Afrique");
+	EUROPE("Europe"), AMERIQUE("Amérique"), ASIE("Asie"), OCEANIE("Océanie"), AFRIQUE("Afrique");
 
-	private int numeroOrdre;
 	private String nom;
 
-	private Continent(int numeroOrdre, String nom) {
-		this.numeroOrdre = numeroOrdre;
-		this.nom = nom;
-	}
+	private Continent(String nom) {
 
-	public int getNumeroOrdre() {
-		return numeroOrdre;
+		this.nom = nom;
 	}
 
 	public String getNom() {

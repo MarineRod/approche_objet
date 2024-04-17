@@ -21,13 +21,13 @@ public enum Saison {
 	}
 
 	// Méthode pour récupérer une instance de Saison à partir du libellé
-	public static Saison getSaisonByLibelle(String nom) {
+	public static Saison obtenirSaison(String nom) {
 		for (Saison saison : Saison.values()) {
 			if (saison.nom.equals(nom)) {
 				return saison;
 			}
 		}
-		return null; // Retourne null si aucun libellé correspondant n'est trouvé
+		return null; // Retourne null si aucun nom correspondant n'est trouvé
 	}
 
 }
