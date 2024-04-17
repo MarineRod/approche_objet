@@ -6,20 +6,31 @@ public class Pays {
 	//3 attributs : nom, nb d’habitants, PIB/habitant.
 	protected String nom;
 	private int nbHabitants;
-	private double pibHab;
+	private int pibHab;
 	
 	
-	public Pays(String nom, int nbHabitants, double pibHab) {
+
+
+	 public Pays(String nom, int nbHabitants, int pibHab) {
 		super();
 		this.nom = nom;
 		this.nbHabitants = nbHabitants;
 		this.pibHab = pibHab;
 	}
 
-	 public double getPIBTotal() {
+
+	public int getPIBTotal() {
 	        return nbHabitants *pibHab;
 	    }
+
+
 	
+	
+	@Override
+	public String toString() {
+		return "Pays [nom=" + nom + ", nbHabitants=" + nbHabitants + ", pibHab=" + pibHab + "]";
+	}
+
 
 	@Override
 	public int hashCode() {
@@ -27,13 +38,7 @@ public class Pays {
 	}
 
 
-
-
-	
-
-
-
-	 @Override
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -42,18 +47,8 @@ public class Pays {
 		if (getClass() != obj.getClass())
 			return false;
 		Pays other = (Pays) obj;
-		double PIBTotal = nbHabitants * pibHab;
-		double otherPIBTotal = other.nbHabitants * other.pibHab;
-		return nbHabitants == other.nbHabitants && Objects.equals(nom, other.nom)
-				&& Double.doubleToLongBits(pibHab) == Double.doubleToLongBits(other.pibHab)&& Double.doubleToLongBits(PIBTotal) == Double.doubleToLongBits(otherPIBTotal);
+		return nbHabitants == other.nbHabitants && Objects.equals(nom, other.nom) && pibHab == other.pibHab;
 	}
-
-	@Override
-	    public String toString() {
-	        return nom + ", " + nbHabitants + " hab." + pibHab + "pibHab";
-	    }
-
-
 
 
 	public String getNom() {
@@ -61,13 +56,9 @@ public class Pays {
 	}
 
 
-
-
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-
-
 
 
 	public int getNbHabitants() {
@@ -75,26 +66,25 @@ public class Pays {
 	}
 
 
-
-
 	public void setNbHabitants(int nbHabitants) {
 		this.nbHabitants = nbHabitants;
 	}
 
 
-
-
-	public double getPibHab() {
+	public int getPibHab() {
 		return pibHab;
 	}
 
 
-
-
-	public void setPibHab(double pibHab) {
+	public void setPibHab(int pibHab) {
 		this.pibHab = pibHab;
 	}
+	
 
-	 
-	 
 }
+
+
+
+	
+
+	

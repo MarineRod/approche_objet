@@ -36,8 +36,8 @@ package tri;
 
 		@Override
 		public String toString() {
-			return "VillesTri [Nom=" + nom + ", codeDepartement=" + codeDepartement + ", NomRegion=" + NomRegion + ", popToT="
-					+ popTot + "]";
+			return "Nom=" + nom + ", codeDepartement=" + codeDepartement + ", NomRegion=" + NomRegion + ", popToT="
+					+ popTot ;
 		}
 
 		public String getNom() {

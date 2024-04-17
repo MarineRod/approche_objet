@@ -45,7 +45,7 @@ public class FichierListeVillesTrieesParOrdreAlphabetique {
 
 		Collections.sort(listeVilles);
 		
-        System.out.println(listeVilles.size());
+       System.out.println(listeVilles.size());
 		
 		for (Villes LV : listeVilles) {
 			
