@@ -21,7 +21,7 @@ public class Affiche10VillesPlusPeupleesFrance extends MenuService {
 		System.out.println("Les 10 villes les plus peuplées de France :");
 		for (int i = 0; i < 10 && i < villes.size(); i++) {
 			Ville ville = villes.get(i);
-			System.out.println((i + 1) + ". " + ville.getNomCommune() + " - Population : " + ville.getPopTot());
+			System.out.println((i + 1) + ". " + ville.getNomCommune() + " - Population : " + ville.getPopTot()+ " habitants");
 		}
 	}
 

@@ -31,6 +31,8 @@ public class Afficher10RegionsPlusPeuplees extends MenuService {
 			int populationRegion = populationParRegion.getOrDefault(nomRegion, 0);
 			populationRegion += ville.getPopTot();
 			populationParRegion.put(nomRegion, populationRegion);
+			
+		}
 
 			// Trier les régions par population décroissante
 			// Convertir la HashMap en liste d'entrées (région, population)
@@ -53,4 +55,3 @@ public class Afficher10RegionsPlusPeuplees extends MenuService {
 			}
 		}
 	}
-}

@@ -24,14 +24,14 @@ public class PopulationDuneVilleDonnee extends MenuService {
 			if (ville.getNomCommune().equalsIgnoreCase(nomVille)) {
 				villeTrouvee = true;
 				int population = ville.getPopTot();
-				System.out.println("Population de " + nomVille + " : " + population);
+				System.out.println("Population de " + nomVille + " : " + population+ " habitants");
 				break; // Sortir de la boucle une fois que la ville est trouvée
 			}
 		}
 
 		// Si la ville n'est pas trouvée, afficher un message d'erreur
 		if (!villeTrouvee) {
-			System.out.println("La ville " + nomVille + " n'a pas été trouvée dans le recensement.");
+			System.out.println("La ville " + nomVille + " n'a pas été trouvée.");
 
 		}
 	}

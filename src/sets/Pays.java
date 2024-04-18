@@ -26,7 +26,7 @@ public class Pays {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(nbHabitants, nom, pibHab);
+		return Objects.hash(nbHabitants, nom.toLowerCase(), pibHab);
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class Pays {
 		if (getClass() != obj.getClass())
 			return false;
 		Pays other = (Pays) obj;
-		return nbHabitants == other.nbHabitants && Objects.equals(nom, other.nom)
+		return nbHabitants == other.nbHabitants && Objects.equals(nom.toLowerCase(), other.nom.toLowerCase())
 				&& pibHab == other.pibHab;
 	}
 

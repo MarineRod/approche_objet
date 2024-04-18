@@ -26,12 +26,12 @@ public class Afficher10DepartementsPlusPeuples extends MenuService {
 			populationDepartement += ville.getPopTot();
 			populationParDepartement.put(codeDepartement, populationDepartement);
 
-			
+		}
 			List<Map.Entry<String, Integer>> entries = new ArrayList<>(populationParDepartement.entrySet());
 			entries.sort((entry1, entry2) -> entry2.getValue().compareTo(entry1.getValue()));
 
 			// Afficher les 10 régions les plus peuplées
-			System.out.println("Les 10 régions les plus peuplées de France :");
+			System.out.println("Les 10 départements les plus peuplées de France :");
 			int count = 0;
 			for (Map.Entry<String, Integer> entry : entries) {
 				System.out.println(entry.getKey() + " : " + entry.getValue() + " habitants");
@@ -42,6 +42,6 @@ public class Afficher10DepartementsPlusPeuples extends MenuService {
 			}
 		}
 	}
-}
+
 
 

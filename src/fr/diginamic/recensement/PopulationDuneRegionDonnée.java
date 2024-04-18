@@ -16,17 +16,26 @@ public class PopulationDuneRegionDonnée extends MenuService {
 		// Parcourir la liste des villes pour trouver celle correspondant au nom saisi
 
 		int popRegion = 0;
-
+		String nomRegionRecupere = null;
 		for (Ville ville : villes) {
 
 			if (ville.getNomRegion().equalsIgnoreCase(nomRegion)) {
 
 				popRegion += ville.getPopTot();
-
+				nomRegionRecupere = ville.getNomRegion();
 			}
 		}
 
-		System.out.println("Population de la région " + nomRegion + " : " + popRegion);
+		if (nomRegion.equalsIgnoreCase(nomRegionRecupere)) {
 
+			System.out.println("Population de la région " + nomRegion + " : " + popRegion);
+
+		}
+		else
+		{
+			
+			System.out.println("la région n'est pas trouvée");	
+			
+		}
 	}
 }

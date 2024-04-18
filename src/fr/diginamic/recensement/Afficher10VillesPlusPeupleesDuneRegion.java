@@ -33,7 +33,7 @@ public class Afficher10VillesPlusPeupleesDuneRegion extends MenuService {
 		// Afficher les 10 premières villes de la région
 		int count = 0;
 		for (Ville ville : villesRegion) {
-			System.out.println((count + 1) + ". " + ville.getNomCommune() + " - Population : " + ville.getPopTot());
+			System.out.println((count + 1) + ". " + ville.getNomCommune() + " - Population : " + ville.getPopTot()+ " habitants");
 			count++;
 			if (count >= 10) {
 				break;

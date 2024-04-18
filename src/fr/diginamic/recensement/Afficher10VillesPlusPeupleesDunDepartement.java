@@ -34,7 +34,7 @@ public class Afficher10VillesPlusPeupleesDunDepartement extends MenuService {
 		// Afficher les 10 premières villes de la région
 		int count = 0;
 		for (Ville ville : villesDepartement) {
-			System.out.println((count + 1) + ". " + ville.getNomCommune() + " - Population : " + ville.getPopTot());
+			System.out.println((count + 1) + ". " + ville.getNomCommune() + " - Population : " + ville.getPopTot() +" habitants");
 			count++;
 			if (count >= 10) {
 				break;
@@ -43,7 +43,7 @@ public class Afficher10VillesPlusPeupleesDunDepartement extends MenuService {
 		}
 
 		if (count == 0) {
-			System.out.println("Aucune ville trouvée pour la région spécifiée.");
+			System.out.println("Aucune ville trouvée pour le département spécifié.");
 		}
 	}
 

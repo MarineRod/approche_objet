@@ -50,8 +50,7 @@ public class FichierVillesSup25000TrieesOrdreAlphabetique {
 
 		}
 
-		// Triez par ordre alphabétique la liste en utilisant la méthode compareTo définie dans la classe
-		// Villes
+		
 		
 		
 		//Ici le Collections.sort va effectuer un tri alphabétique sur un String donc la méthode compareTo() redéfinie
