@@ -1,10 +1,11 @@
 package operations;
 
-import operations.Operations;
 
 public class Debit extends Operations {
 	
-    super(date, montant);
+	public Debit(String date, double montant) {
+		super(date, montant);
+	}
 
 	
 	@Override

@@ -1,37 +1,37 @@
 package operations;
 
-public class Operations {
+public abstract class Operations {
 	
-	private String dateOperation;
-	private double montantOperation;
+	private String date;
+	private double montant;
 	
 	
-	public Operations(String dateOperation, double montantOperation) {
+	public Operations(String date, double montant) {
 		super();
-		this.dateOperation = dateOperation;
-		this.montantOperation = montantOperation;
+		this.date = date;
+		this.montant = montant;
 	}
 
 	
 	public abstract String getType();
 
-	public String getDateOperation() {
-		return dateOperation;
+	public String getdate() {
+		return date;
 	}
 
 
-	public void setDateOperation(String dateOperation) {
-		this.dateOperation = dateOperation;
+	public void setdate(String date) {
+		this.date = date;
 	}
 
 
-	public double getMontantOperation() {
-		return montantOperation;
+	public double getmontant() {
+		return montant;
 	}
 
 
-	public void setMontantOperation(double montantOperation) {
-		this.montantOperation = montantOperation;
+	public void setmontant(double montant) {
+		this.montant = montant;
 	}
 	
 	

@@ -7,7 +7,7 @@ import java.util.Set;
 
 import listes.Ville;
 
-public class MapVilles {
+public class MapVillesExercice4 {
 
 	public static void main(String[] args) {
 
@@ -37,6 +37,10 @@ public class MapVilles {
 		Set<String> listeKeys = mapVilles.keySet();
 		
 		//je parcours la liste des clés
+		//Pour chaque clé, il récupère l'objet Ville correspondant
+		//à cette clé à partir de la map
+		//mise à jour de la valeur minimale (min) avec le nombre d'habitants de cette ville
+		//et mise à jour de la clé correspondante (keyMin) avec la clé actuelle.
 		for (String key : listeKeys) {
 			Ville ville = mapVilles.get(key);
 			if (ville.getNbHabitants() < min) {
